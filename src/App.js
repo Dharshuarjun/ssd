@@ -12,6 +12,7 @@ import User from './User';
 import Product from './Product';
 import Viewuser from './Viewuser';
 import Useredit from './Useredit';
+
 function App() {
   return (
     <BrowserRouter>
@@ -21,11 +22,12 @@ function App() {
       <Route path="dashboard" element={<Dashboard/>}/>
           <Route path="users" element={<User/>}/>
           <Route path="user/create" element={<Createuser/>}/>
-          <Route path="products" element={<Product/>}/>
+          <Route path="/portal/products" element={<Product/>}/>
           <Route path="user/view/:userId" element={<Viewuser/>}/>
           <Route path="user/edit/:userId" element={<Useredit/>}/>
           </Route>
     </Routes>
+
     </BrowserRouter>
    
   );

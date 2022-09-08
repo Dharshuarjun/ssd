@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import {useState} from "react";
 import { useFormik } from 'formik';
 import { useNavigate, useParams } from 'react-router-dom';
-import axios from "axios";
+import axios from "./axios";
 function Useredit() {
     let [isLoading,setLoading]=useState(false);
     let params=useParams();
@@ -38,7 +38,7 @@ function Useredit() {
         },
         onSubmit:async(values)=>{
             try {
-                await axios.put(`https://62c29fa0876c4700f5292e27.mockapi.io/students/${params.userId}`,values)
+                await axios.put(`/students/${params.userId}`,values)
 navigate("/portal/users")
             } catch (error) {
                 alert("something went wrong")

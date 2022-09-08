@@ -118,7 +118,7 @@ function Createuser() {
               type={"submit"}
               value="Submit"
               className="btn btn-primary mt-2"
-              disabled={!formik.isValid&&isLoading}
+              disabled={!formik.values.isValid&&isLoading}
             />
           </div>
         </div>
